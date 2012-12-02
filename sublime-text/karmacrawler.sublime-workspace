@@ -1,0 +1,570 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"get",
+				"http.get(options, cb);"
+			],
+			[
+				"createSer",
+				"http.createServer(requestListener);"
+			],
+			[
+				"be",
+				"beatles"
+			],
+			[
+				"ht",
+				"html"
+			],
+			[
+				"toggle",
+				".toggle	.toggle"
+			],
+			[
+				"tie",
+				"times"
+			],
+			[
+				"fu",
+				"function"
+			],
+			[
+				"w",
+				"writeHead"
+			],
+			[
+				"click",
+				".click	click"
+			],
+			[
+				"ready",
+				"ready	document-ready"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "Packages/User/Chrome.sublime-build",
+	"command_palette":
+	{
+		"height": 96.0,
+		"selected_items":
+		[
+			[
+				"project",
+				"Project: Save As"
+			],
+			[
+				"add fo",
+				"Project: Add Folder"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"proje",
+				"Project: Close"
+			],
+			[
+				"folder",
+				"Project: Add Folder"
+			],
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"doc",
+				"Goto Documentation"
+			],
+			[
+				"fetc",
+				"Fetch: Manage"
+			],
+			[
+				"fetch",
+				"Fetch: Package"
+			],
+			[
+				"brow",
+				"Preferences: Browse Packages"
+			],
+			[
+				"lint",
+				"SublimeLinter: Show Error List"
+			],
+			[
+				"setting",
+				"SublimeLinter: Background Linting"
+			],
+			[
+				"linter",
+				"SublimeLinter: Disable Linting"
+			],
+			[
+				"dele",
+				"File: Delete"
+			],
+			[
+				"save",
+				"File: Save All"
+			],
+			[
+				"delete",
+				"File: Delete"
+			],
+			[
+				"new file",
+				"File: New File Relative to Current View"
+			],
+			[
+				"sett",
+				"Preferences: Settings - Default"
+			],
+			[
+				"add",
+				"Project: Add Folder"
+			],
+			[
+				"for",
+				"Format: Javascript"
+			],
+			[
+				"settings",
+				"File: Open In Browser - Testing Server"
+			],
+			[
+				"ed",
+				"Project: Edit"
+			],
+			[
+				"key bin",
+				"Preferences: Key Bindings - Default"
+			],
+			[
+				"edi",
+				"Project: Edit"
+			],
+			[
+				"vr",
+				"View: Toggle Side Bar"
+			],
+			[
+				"vs",
+				"View: Toggle Side Bar"
+			],
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"remoe",
+				"Package Control: Remove Package"
+			],
+			[
+				"jad",
+				"Set Syntax: Jade"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"open fi",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"javascript",
+				"Set Syntax: jQuery (JavaScript)"
+			],
+			[
+				"side",
+				"View: Toggle Side Bar"
+			],
+			[
+				"browse",
+				"Preferences: Browse Packages"
+			],
+			[
+				"form",
+				"Format: Javascript"
+			],
+			[
+				"edit",
+				"Project: Edit"
+			],
+			[
+				"pro",
+				"Project: Add Folder"
+			],
+			[
+				"remo",
+				"Package Control: Remove Package"
+			],
+			[
+				"proj",
+				"Project: Add Folder"
+			],
+			[
+				"brows",
+				"Preferences: Browse Packages"
+			],
+			[
+				"package in",
+				"Package Control: Install Package"
+			],
+			[
+				"file",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 593.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/stephen/.config/sublime-text-2/Packages/User/GitHub.sublime-settings",
+		"/home/stephen/.config/sublime-text-2/Packages/sublime-github/GitHub.sublime-settings",
+		"/home/stephen/Desktop/linux cmds",
+		"/home/stephen/Desktop/karma/package.json",
+		"/home/stephen/Desktop/karmacrawler/package.json",
+		"/home/stephen/Desktop/karma/app.js",
+		"/home/stephen/Desktop/karma/routes/index.js",
+		"/home/stephen/Desktop/karma/parsers.js",
+		"/home/stephen/Desktop/karma/jquery.js",
+		"/home/stephen/Desktop/getKarma/app.js",
+		"/home/stephen/.config/sublime-text-2/Packages/User/Fetch.sublime-settings",
+		"/home/stephen/Downloads/mine.js",
+		"/home/stephen/Desktop/karma/routes/parsers.js",
+		"/home/stephen/.config/sublime-text-2/Packages/User/SublimeLinter.sublime-settings",
+		"/home/stephen/Desktop/karma/routes/mine.js",
+		"/home/stephen/.config/sublime-text-2/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/home/stephen/.config/sublime-text-2/Packages/SublimeLinter/README.md",
+		"/home/stephen/Desktop/karma/views/index.jade",
+		"/home/stephen/Desktop/karma/routes/user.js",
+		"/home/stephen/Desktop/karma/routes/mineUser.js",
+		"/home/stephen/Desktop/karma/db.js",
+		"/home/stephen/Desktop/karma/asdfasdf.js",
+		"/home/stephen/Desktop/karma/routes/asdfsd.js",
+		"/home/stephen/Desktop/karma/routes/asdf.js",
+		"/home/stephen/Desktop/karma/mineUser.js",
+		"/home/stephen/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/stephen/Desktop/karma/sublime-text/karma.sublime-project",
+		"/home/stephen/Desktop/getKarma/db.js",
+		"/home/stephen/Desktop/getKarma2/package.json",
+		"/home/stephen/Desktop/getKarma2/app.js",
+		"/home/stephen/Desktop/getKarma2/node_modules/mongoose/package.json",
+		"/home/stephen/Desktop/pop1/routes/index.js",
+		"/home/stephen/Desktop/getKarma/dbfunctions.js",
+		"/home/stephen/Desktop/pop1/app.js",
+		"/home/stephen/Desktop/getKarma/oldapp.js",
+		"/home/stephen/Desktop/getKarma/pipes.js",
+		"/home/stephen/Desktop/getKarma/stripper.js",
+		"/home/stephen/Desktop/getKarma/sublime-project/getKarma.sublime-project",
+		"/home/stephen/Desktop/getKarma/index.js",
+		"/home/stephen/Desktop/untitled.js",
+		"/home/stephen/.config/sublime-text-2/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/stephen/Desktop/getKarma/package.json",
+		"/M/Stephen/My Documents/websites/getKarma/app.js",
+		"/M/Stephen/My Documents/websites/getKarma/index.js",
+		"/M/Stephen/My Documents/websites/getKarma/stripper.js",
+		"/M/Stephen/My Documents/websites/getKarma/node_modules/htmlparser/runtests.js",
+		"/M/Stephen/My Documents/websites/getKarma/package.json",
+		"/M/Stephen/My Documents/websites/getKarma/node_modules/htmlparser/package.json",
+		"/M/Stephen/My Documents/websites/getKarma/test.js",
+		"/M/Stephen/My Documents/websites/test/routes/index.js",
+		"/M/Stephen/My Documents/websites/test/app.js",
+		"/M/Stephen/My Documents/websites/test/package.json",
+		"/M/Stephen/My Documents/websites/test/views/fart.jade",
+		"/M/Stephen/My Documents/websites/test/views/index.jade",
+		"/M/Stephen/My Documents/websites/test/views/layout.jade",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Default (Windows).sublime-keymap",
+		"/M/Stephen/My Documents/websites/file-explorer/index.js",
+		"/M/Stephen/My Documents/websites/file-explorer/package.json",
+		"/M/Stephen/My Documents/websites/pingBot/pingBot.js",
+		"/M/Stephen/My Documents/websites/getHeaders/server.js",
+		"/M/Stephen/My Documents/websites/getHeaders/pingBot.js",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/nodejsLauncher/Default (Windows).sublime-keymap",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/nodejsLauncher/nodeLauncher.pyc",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/nodejsLauncher/nodeLauncher.py",
+		"/M/Stephen/My Documents/websites/test/routes/user.js",
+		"/M/Stephen/My Documents/websites/test/routes/fart.js",
+		"/M/Stephen/My Documents/websites/express_test/package.json",
+		"/C/Users/Stephen/redirect.js",
+		"/M/Stephen/My Documents/websites/simpleRouting/server.js",
+		"/M/Stephen/My Documents/websites/server.js",
+		"/C/websites/index.html",
+		"//UBUNTU/Public/websites/node/readfile.js",
+		"//UBUNTU/Public/websites/node/pingbot.js",
+		"//UBUNTU/Public/websites/node/callback",
+		"//UBUNTU/Public/websites/node/my-web-server/app.js",
+		"//UBUNTU/Public/websites/node/httpget.js",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/node/http-server.sublime-snippet",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/JavaScript/siaf.sublime-snippet",
+		"/C/Users/Stephen/readfile.js",
+		"/C/Users/Stephen/AppData/Local/Temp/vmware-Stephen/VMwareDnD/2ef22900/app.js",
+		"/M/Stephen/My Documents/oldwebpages/weddingtwo/js/rsvpformgen.js",
+		"//UBUNTU/Public/websites/talkback/site/js/jquery.js",
+		"/M/Stephen/My Documents/oldwebpages/weddingtwo/index.php",
+		"//UBUNTU/Public/websites/node/helloworld/app.js",
+		"//UBUNTU/Public/websites/template/site/css/normalize.css",
+		"//UBUNTU/Public/websites/percent/taetas.php",
+		"/C/wamp/www/percent/site/index.php",
+		"/C/wamp/www/percent/site/js/jquery.js",
+		"//192.168.38.129/websites/index.html",
+		"/site/js/jquery.js",
+		"/C/wamp/www/index.php",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/JsFormat/README.md",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/JSLint/README.md",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Settings/SideBarEnhancements.json",
+		"/C/wamp/www/percent/site/sublime project files/percent.sublime-project",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/Preview/README.md",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/Preview/Preview.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Preview.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/Prevu/Prevu.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/Prevu/readme.md",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/Default (Windows).sublime-keymap",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Side Bar.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/Side Bar.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Chrome.sublime-build",
+		"/C/Program Files (x86)/Google/Chrome/Application/chrome.exe",
+		"/C/wamp/www/percent/site/percent.sublime-project",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/SideBarEnhancements/readme.md",
+		"/C/wamp/www/percent/fart.html",
+		"/C/wamp/www/percent/site/commons.html",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/PhpDoc/README",
+		"/C/Users/Stephen/pee.php",
+		"/C/Users/Stephen/fart.html",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Fetch.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
+		"/C/Users/Stephen/jquery.js"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"window",
+			"userData",
+			")\n",
+			"getUsernames",
+			"mine",
+			"l",
+			"warning",
+			"comma",
+			"mongojs",
+			"DB",
+			"getSubreddit",
+			"function",
+			"select",
+			"ctrl+alt+",
+			"expand_selection",
+			"select",
+			"a",
+			"expand_selection",
+			"select",
+			"res",
+			"blah",
+			"        ",
+			"-(blah blah balh)",
+			"profile",
+			"(\"",
+			"The",
+			"com",
+			"	//",
+			"n",
+			"console.log(res.headers);",
+			"file",
+			"readfile",
+			"req",
+			"'",
+			"$('.",
+			"input",
+			"div",
+			"buttonwrapper",
+			"write",
+			"request",
+			"{\n",
+			"response",
+			"res",
+			"firefox"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 118.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"ap",
+				"app.js"
+			],
+			[
+				"mine",
+				"routes/mineUser.js"
+			],
+			[
+				"inde",
+				"routes/index.js"
+			],
+			[
+				"db",
+				"db.js"
+			],
+			[
+				"ind",
+				"views/index.jade"
+			],
+			[
+				"app",
+				"app.js"
+			],
+			[
+				"pip",
+				"pipes.js"
+			],
+			[
+				"a",
+				"app.js"
+			],
+			[
+				"s",
+				"stripper.js"
+			],
+			[
+				"beha",
+				"site/js/behavior.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/home/stephen/Desktop/getKarma/sublime-project/getKarma.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 173.0,
+	"status_bar_visible": true
+}
