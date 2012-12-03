@@ -5,8 +5,7 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
-  , mine = require('./routes/mine')
+  , main = require('./routes/main')
   , http = require('http')
   , path = require('path');
 
@@ -28,9 +27,11 @@ app.configure('development', function(){
   app.use(express.errorHandler());
 });
 
-app.get('/', routes.index);
-app.get('/users', user.list);
-app.get('/user/:username', mine.miner);
+// app.get('/', routes.index);
+// app.get('/user/:username', main.getUser);
+
+require('./routes/index')(app);
+require('./routes/main')(app);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
