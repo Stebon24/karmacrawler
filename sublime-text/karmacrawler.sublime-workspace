@@ -47,13 +47,52 @@
 	},
 	"buffers":
 	[
+		{
+			"contents": "var http = require('http')\n,	url = require('url')\n,	querystring = require('querystring');\n\nvar urlTypes = [];\n\nvar setUrlTypes = function(username, cb) {\n\n	urlTypes[0] = '/user/' + username + '/.json';\n	urlTypes[1] = '/user/' + username + '/comments/.json';\n	urlTypes[2] = '/user/' + username + '/submitted/.json';\n	// urlTypes[3] = '/user/' + username + '/liked.json';\n	// urlTypes[4] = '/user/' + username + '/disliked.json';\n	// urlTypes[5] = '/user/' + username + '/hidden.json';\n	// urlTypes[6] = '/user/' + username + '/saved.json';\n	cb();\n\n};\n\nfunction RequestOptions(host, path){\n\n	this.host = host;\n	this.path = path;\n\n}\n\nvar collector = function(path, currentCount, lastPost) {\n\n		var options = new RequestOptions('www.reddit.com', path);\n		var userData = '';\n		var iteration = (currentCount) ? currentCount : 0;\n\n		http.get(options, function(res) {\n			res.setEncoding('utf8');\n			\n			res.on('data', function(data) {\n				userData += data;\n			});\n\n			res.on('end', function() {\n				userData = JSON.parse(userData);\n				iteration += 25;\n\n				if(userData.hasOwnProperty('data')) {\n					var post = userData.data.after;\n					var currentUrlObj = querystring.parse(options.path);\n					var currentPath = url.parse(options.path).pathname;\n					var nextUrl = currentPath + '?count=' + iteration + '&after=' + post;\n					console.log(nextUrl);\n			\n					if (currentUrlObj.after !== post) {\n						collector(nextUrl, iteration, post);\n						crawlTime = console.timeEnd('total crawl time');\n						return;\n					}\n				}\n			});\n\n			res.on('error', function(e) {\n				console.log(e);\n			});\n		});\n	};\n\nvar startCollection = function() {\n\n	urlTypes.forEach(function(element, index) {\n		collector(element);\n	});\n\n};\n\nmodule.exports = function(username) {\n\n	console.time('total crawl time');\n	setUrlTypes(username, startCollection);\n\n};",
+			"file": "/home/stephen/Desktop/karmacrawler/engine/crawlUser.js",
+			"file_size": 1849,
+			"file_write_time": 1354594116000000,
+			"settings":
+			{
+				"buffer_size": 1822,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/home/stephen/Desktop/karmacrawler/app.js",
+			"settings":
+			{
+				"buffer_size": 936,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/User/Chrome.sublime-build",
 	"command_palette":
 	{
-		"height": 96.0,
+		"height": 75.0,
 		"selected_items":
 		[
+			[
+				"format",
+				"Format: Javascript"
+			],
+			[
+				"doc",
+				"Goto Documentation"
+			],
+			[
+				"new",
+				"File: New File Relative to Current View"
+			],
+			[
+				"settings d",
+				"Preferences: Settings - Default"
+			],
+			[
+				"proje",
+				"Project: Edit"
+			],
 			[
 				"project",
 				"Project: Save As"
@@ -79,20 +118,8 @@
 				"Package Control: List Packages"
 			],
 			[
-				"proje",
-				"Project: Close"
-			],
-			[
 				"folder",
 				"Project: Add Folder"
-			],
-			[
-				"format",
-				"Format: Javascript"
-			],
-			[
-				"doc",
-				"Goto Documentation"
 			],
 			[
 				"fetc",
@@ -169,10 +196,6 @@
 			[
 				"vs",
 				"View: Toggle Side Bar"
-			],
-			[
-				"new",
-				"File: New File Relative to Current View"
 			],
 			[
 				"view",
@@ -260,6 +283,20 @@
 	},
 	"file_history":
 	[
+		"/home/stephen/Desktop/requester.js",
+		"/home/stephen/Desktop/karmacrawler/routes/main.js",
+		"/home/stephen/Desktop/karmacrawler/routes/index.js",
+		"/home/stephen/Desktop/karmacrawler/engine/oldMine.js",
+		"/home/stephen/Desktop/karmacrawler/engine/crawler.js",
+		"/home/stephen/Desktop/karmacrawler/db.js",
+		"/home/stephen/Desktop/karmacrawler/engine/mine.js",
+		"/home/stephen/Desktop/karmacrawler/routes/db.js",
+		"/home/stephen/Desktop/karmacrawler/routes/users.js",
+		"/home/stephen/Desktop/karmacrawler/app.js",
+		"/home/stephen/Desktop/karmacrawler/routes/user.js",
+		"/home/stephen/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/stephen/Desktop/karmacrawler/sublime-text/karmacrawler.sublime-project",
+		"/home/stephen/Desktop/karmacrawler/main.js",
 		"/home/stephen/.config/sublime-text-2/Packages/User/GitHub.sublime-settings",
 		"/home/stephen/.config/sublime-text-2/Packages/sublime-github/GitHub.sublime-settings",
 		"/home/stephen/Desktop/linux cmds",
@@ -285,7 +322,6 @@
 		"/home/stephen/Desktop/karma/routes/asdfsd.js",
 		"/home/stephen/Desktop/karma/routes/asdf.js",
 		"/home/stephen/Desktop/karma/mineUser.js",
-		"/home/stephen/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/stephen/Desktop/karma/sublime-text/karma.sublime-project",
 		"/home/stephen/Desktop/getKarma/db.js",
 		"/home/stephen/Desktop/getKarma2/package.json",
@@ -374,10 +410,7 @@
 		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/PhpDoc/README",
 		"/C/Users/Stephen/pee.php",
 		"/C/Users/Stephen/fart.html",
-		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Fetch.sublime-settings",
-		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/Package Control/Package Control.sublime-settings",
-		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Package Control.sublime-settings",
-		"/C/Users/Stephen/jquery.js"
+		"/C/Users/Stephen/AppData/Roaming/Sublime Text 2/Packages/User/Fetch.sublime-settings"
 	],
 	"find":
 	{
@@ -395,6 +428,17 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"currentCount",
+			"time",
+			"Time",
+			"milliseconds",
+			"currentPath",
+			"currentCount",
+			"logcurrentCount",
+			"close",
+			"url",
+			"};\n",
+			"miner",
 			"window",
 			"userData",
 			")\n",
@@ -456,8 +500,244 @@
 	"groups":
 	[
 		{
+			"selected": 1,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/home/stephen/Desktop/karmacrawler/engine/crawlUser.js",
+					"settings":
+					{
+						"buffer_size": 1822,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1084,
+								1084
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"laxcomma": true,
+								"regexdash": true,
+								"smarttabs": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 255.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "/home/stephen/Desktop/karmacrawler/app.js",
+					"settings":
+					{
+						"buffer_size": 936,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								740,
+								740
+							]
+						],
+						"settings":
+						{
+							"annotations":
+							[
+								"TODO",
+								"README",
+								"FIXME"
+							],
+							"csslint_options":
+							{
+								"adjoining-classes": "warning",
+								"box-model": true,
+								"box-sizing": "warning",
+								"compatible-vendor-prefixes": "warning",
+								"display-property-grouping": true,
+								"duplicate-background-images": "warning",
+								"duplicate-properties": true,
+								"empty-rules": true,
+								"errors": true,
+								"fallback-colors": "warning",
+								"floats": "warning",
+								"font-faces": "warning",
+								"font-sizes": "warning",
+								"gradients": "warning",
+								"ids": "warning",
+								"import": "warning",
+								"important": "warning",
+								"known-properties": true,
+								"outline-none": "warning",
+								"overqualified-elements": "warning",
+								"qualified-headings": "warning",
+								"regex-selectors": "warning",
+								"rules-count": "warning",
+								"shorthand": "warning",
+								"star-property-hack": "warning",
+								"text-indent": "warning",
+								"underscore-property-hack": "warning",
+								"unique-headings": "warning",
+								"universal-selector": "warning",
+								"vendor-prefix": true,
+								"zero-units": "warning"
+							},
+							"gjslint_ignore":
+							[
+								110
+							],
+							"gjslint_options":
+							[
+							],
+							"javascript_linter": "jshint",
+							"jshint_options":
+							{
+								"browser": true,
+								"evil": true,
+								"laxcomma": true,
+								"regexdash": true,
+								"smarttabs": true,
+								"sub": true,
+								"trailing": true,
+								"wsh": true
+							},
+							"pep8": true,
+							"pep8_ignore":
+							[
+								"E501"
+							],
+							"perl_linter": "perlcritic",
+							"pyflakes_ignore":
+							[
+							],
+							"pyflakes_ignore_import_*": true,
+							"sublimelinter": true,
+							"sublimelinter_delay": 2,
+							"sublimelinter_disable":
+							[
+							],
+							"sublimelinter_executable_map":
+							{
+							},
+							"sublimelinter_fill_outlines": false,
+							"sublimelinter_gutter_marks": false,
+							"sublimelinter_mark_style": "outline",
+							"sublimelinter_notes": false,
+							"sublimelinter_objj_check_ascii": false,
+							"sublimelinter_popup_errors_on_save": false,
+							"sublimelinter_syntax_map":
+							{
+								"C++": "c",
+								"Python Django": "python",
+								"Ruby on Rails": "ruby"
+							},
+							"sublimelinter_wrap_find": true,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -507,6 +787,14 @@
 		"selected_items":
 		[
 			[
+				"main",
+				"routes/main.js"
+			],
+			[
+				"a",
+				"app.js"
+			],
+			[
 				"ap",
 				"app.js"
 			],
@@ -535,10 +823,6 @@
 				"pipes.js"
 			],
 			[
-				"a",
-				"app.js"
-			],
-			[
 				"s",
 				"stripper.js"
 			],
@@ -555,6 +839,10 @@
 		"selected_items":
 		[
 			[
+				"kar",
+				"/home/stephen/Desktop/karma/sublime-text/karma.sublime-project"
+			],
+			[
 				"",
 				"/home/stephen/Desktop/getKarma/sublime-project/getKarma.sublime-project"
 			]
@@ -564,7 +852,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 173.0,
 	"status_bar_visible": true
 }
