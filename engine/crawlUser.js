@@ -1,15 +1,10 @@
+var http = require('http')
+,	url = require('url')
+,	querystring = require('querystring');
+
 var urlTypes = [];
-var http = require('http');
-var url = require('url');
-var querystring = require('querystring');
-var crawlTime = '';
 
-function RequestOptions(host, path){
-	this.host = host;
-	this.path = path;
-}
-
-function setUrlTypes(username, cb) {
+var setUrlTypes = function(username, cb) {
 
 	urlTypes[0] = '/user/' + username + '/.json';
 	urlTypes[1] = '/user/' + username + '/comments/.json';
@@ -20,29 +15,29 @@ function setUrlTypes(username, cb) {
 	// urlTypes[6] = '/user/' + username + '/saved.json';
 	cb();
 
+};
+
+function RequestOptions(host, path){
+
+	this.host = host;
+	this.path = path;
+
 }
 
 var collector = function(path, currentCount, lastPost) {
 
 		var options = new RequestOptions('www.reddit.com', path);
 		var userData = '';
-		var iteration = 0;
-
-		if(currentCount) {
-			iteration = currentCount;
-		}
-
+		var iteration = (currentCount) ? currentCount : 0;
 
 		http.get(options, function(res) {
-			// console.log('request sent to ' + options.path + '\n');
 			res.setEncoding('utf8');
+			
 			res.on('data', function(data) {
 				userData += data;
-				// console.log(data);
 			});
 
 			res.on('end', function() {
-				// console.log('response ended');
 				userData = JSON.parse(userData);
 				iteration += 25;
 
@@ -60,18 +55,20 @@ var collector = function(path, currentCount, lastPost) {
 					}
 				}
 			});
+
 			res.on('error', function(e) {
 				console.log(e);
 			});
 		});
 	};
 
-function startCollection() {
+var startCollection = function() {
+
 	urlTypes.forEach(function(element, index) {
-		// console.log(element);
 		collector(element);
 	});
-}
+
+};
 
 module.exports = function(username) {
 
